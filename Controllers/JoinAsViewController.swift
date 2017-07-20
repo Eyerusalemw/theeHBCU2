@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import FirebaseCore
+import Firebase
 
 
 class JoinAsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
@@ -22,11 +24,14 @@ class JoinAsViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     let catagory = ["Student", "Mentor", "Recruiter"]
     
+    var selectIndex = 0
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        selectIndex = row
         return catagory[row]
     }
     
@@ -39,6 +44,8 @@ class JoinAsViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        pickerViewButton.dataSource = self
+        pickerViewButton.delegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -47,13 +54,20 @@ class JoinAsViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     @IBAction func nextButtonTapped(_ sender: Any) {
         
+        if catagory[selectIndex] == "Student" {
+            self.performSegue(withIdentifier: "joinasastudent", sender: sender)
+        }
         
-        self.performSegue(withIdentifier: "continuetojoinas", sender: self)
+        if catagory[selectIndex] == "Mentor" {
+            self.performSegue(withIdentifier: "joinasamentor", sender: sender)
+        }
+        
+        if catagory[selectIndex] == "Recruiter" {
+            self.performSegue(withIdentifier: "joinasarecruiter", sender: sender)
+        }
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
          self.dismiss(animated: true, completion: nil)
     }
-    
-    
 }

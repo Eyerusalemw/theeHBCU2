@@ -70,10 +70,4 @@ struct UserService {
             completion()
         }
     }
-    
-    
-    
-    
-    
-    
 }

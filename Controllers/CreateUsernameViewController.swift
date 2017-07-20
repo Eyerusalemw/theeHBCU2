@@ -40,6 +40,7 @@ class CreateUsernameViewController: UIViewController {
                 // handle newly created user here
             })
         }
+        self.performSegue(withIdentifier: "continuetojoinas", sender: self)
     }
     
     
