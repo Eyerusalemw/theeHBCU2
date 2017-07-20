@@ -41,6 +41,13 @@ class CreateUsernameViewController: UIViewController {
             })
         }
     }
+    
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
 }
 
 

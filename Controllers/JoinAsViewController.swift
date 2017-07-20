@@ -37,10 +37,6 @@ class JoinAsViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         joinAsLabel.text = catagory[row]
     }
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -48,5 +44,16 @@ class JoinAsViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    @IBAction func nextButtonTapped(_ sender: Any) {
+        
+        
+        self.performSegue(withIdentifier: "continuetojoinas", sender: self)
+    }
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
+         self.dismiss(animated: true, completion: nil)
+    }
+    
     
 }
