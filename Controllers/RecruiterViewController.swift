@@ -11,9 +11,15 @@ import UIKit
 
 
 
-class RecruiterViewController: UIViewController {
+class ToRecruiterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBAction func nextButtonTapped(_ sender: Any) {
+         self.performSegue(withIdentifier: "tomainviewcontroller", sender: self)
+    }
+    
+    
 }

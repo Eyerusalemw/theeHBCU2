@@ -9,9 +9,14 @@
 import Foundation
 import UIKit
 
-class MentorViewController: UIViewController {
+class ToMentorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBAction func nextButtonTapped(_ sender: Any) {
+         self.performSegue(withIdentifier: "mainviewcontroller", sender: self)
+    }
+    
 }
