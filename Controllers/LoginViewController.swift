@@ -15,9 +15,6 @@ import FirebaseDatabase
 
 
 
-
-
-
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailTextFieldButton: UITextField!
@@ -54,8 +51,9 @@ class LoginViewController: UIViewController {
         
         UserService.loginUser(email: email, password: password){
             // When all is done
-            self.performSegue(withIdentifier: "signInFromLogin", sender: self)
+            self.performSegue(withIdentifier: "logintomainview", sender: self)
         }
+        
 
     
     }
@@ -66,4 +64,5 @@ class LoginViewController: UIViewController {
 
     }
 }
+
 
