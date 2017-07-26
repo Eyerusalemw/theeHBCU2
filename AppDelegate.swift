@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if Auth.auth().currentUser != nil {
             
         } else {
-            // go to loging
+            // go to loging .... to segway different view controllers 
             
             var initialViewController: UIViewController
             let storyBoard = UIStoryboard(name: "Login", bundle: nil)

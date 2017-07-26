@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xWO-BE-0eZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xuB-2k-9Df">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -561,10 +561,10 @@
                                     <constraint firstAttribute="height" constant="28" id="3eC-YJ-3v7"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="icons8-Menu Filled_100" translatesAutoresizingMaskIntoConstraints="NO" id="iLr-CV-6YF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-Menu Filled_100" translatesAutoresizingMaskIntoConstraints="NO" id="iLr-CV-6YF">
                                 <rect key="frame" x="16" y="20" width="30" height="28"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="45" id="YyK-Or-gNN"/>
+                                    <constraint firstAttribute="width" constant="30" id="Cg0-3Q-9NX"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-Notification_50" translatesAutoresizingMaskIntoConstraints="NO" id="FG5-tS-2V7">
@@ -573,9 +573,12 @@
                                     <constraint firstAttribute="width" constant="30" id="zyh-OF-7HA"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Gi-Ox-Dw0">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Gi-Ox-Dw0">
                                 <rect key="frame" x="30" y="83" width="229" height="156"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="229" id="gnt-jy-cGz"/>
+                                    <constraint firstAttribute="height" constant="156" id="nOh-Mi-psf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="Student">
                                     <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -585,9 +588,11 @@
                                     <segue destination="1Fc-Qx-BkY" kind="show" identifier="studenttableview" id="vME-iC-KCa"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDI-qp-7rL">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDI-qp-7rL">
                                 <rect key="frame" x="204" y="268" width="155" height="127"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="155" id="Crf-8g-hmO"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="Mentor">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -596,9 +601,11 @@
                                     <segue destination="Ak0-UA-A98" kind="show" identifier="mentortableview" id="UaD-Ze-Ngu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFt-AB-g9e">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFt-AB-g9e">
                                 <rect key="frame" x="16" y="405" width="255" height="169"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="169" id="FWU-Uf-Hix"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <state key="normal" title="Recruiter">
                                     <color key="titleColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -611,15 +618,23 @@
                         <color key="backgroundColor" red="0.51332706212997437" green="0.41717690229415894" blue="0.50225692987442017" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="UEV-2U-psd" firstAttribute="centerX" secondItem="Vka-ci-UHa" secondAttribute="centerX" id="0Tq-C4-CSI"/>
-                            <constraint firstItem="iLr-CV-6YF" firstAttribute="bottom" secondItem="UEV-2U-psd" secondAttribute="bottom" id="6IW-BO-MIe"/>
-                            <constraint firstItem="iLr-CV-6YF" firstAttribute="leading" secondItem="Vka-ci-UHa" secondAttribute="leadingMargin" id="6ak-YR-QV2"/>
+                            <constraint firstItem="iLr-CV-6YF" firstAttribute="top" secondItem="FG5-tS-2V7" secondAttribute="top" id="2Gt-Ty-W6I"/>
+                            <constraint firstItem="6Gi-Ox-Dw0" firstAttribute="leading" secondItem="Vka-ci-UHa" secondAttribute="leadingMargin" constant="14" id="7xt-2w-GV5"/>
+                            <constraint firstItem="iLr-CV-6YF" firstAttribute="bottom" secondItem="FG5-tS-2V7" secondAttribute="bottom" id="97X-ue-oOB"/>
                             <constraint firstItem="UEV-2U-psd" firstAttribute="leading" secondItem="Vka-ci-UHa" secondAttribute="leading" constant="-4" id="IGl-cJ-cf5"/>
+                            <constraint firstItem="6Gi-Ox-Dw0" firstAttribute="top" secondItem="iLr-CV-6YF" secondAttribute="bottom" constant="35" id="IzI-M4-U8Q"/>
+                            <constraint firstItem="eDI-qp-7rL" firstAttribute="top" secondItem="6Gi-Ox-Dw0" secondAttribute="bottom" constant="29" id="JRE-O6-LjZ"/>
                             <constraint firstAttribute="trailing" secondItem="UEV-2U-psd" secondAttribute="trailing" constant="-4" id="MDQ-9S-jW9"/>
+                            <constraint firstItem="WFt-AB-g9e" firstAttribute="top" secondItem="eDI-qp-7rL" secondAttribute="bottom" constant="10" id="OBj-Yu-IMl"/>
                             <constraint firstItem="UEV-2U-psd" firstAttribute="top" secondItem="d7C-Jf-Fm3" secondAttribute="bottom" id="Ob7-cb-zcv"/>
-                            <constraint firstItem="iLr-CV-6YF" firstAttribute="top" secondItem="UEV-2U-psd" secondAttribute="top" id="WDu-Yt-ybX"/>
-                            <constraint firstItem="FG5-tS-2V7" firstAttribute="top" secondItem="iLr-CV-6YF" secondAttribute="top" id="agB-PQ-f0F"/>
-                            <constraint firstItem="FG5-tS-2V7" firstAttribute="bottom" secondItem="iLr-CV-6YF" secondAttribute="bottom" id="rmR-WI-UJH"/>
+                            <constraint firstItem="iLr-CV-6YF" firstAttribute="leading" secondItem="Vka-ci-UHa" secondAttribute="leadingMargin" id="UEg-wC-f2Q"/>
+                            <constraint firstItem="eDI-qp-7rL" firstAttribute="trailing" secondItem="Vka-ci-UHa" secondAttribute="trailingMargin" id="VId-Sw-0JS"/>
+                            <constraint firstItem="cNY-lc-WEQ" firstAttribute="top" secondItem="WFt-AB-g9e" secondAttribute="bottom" constant="93" id="VPY-C8-GbG"/>
+                            <constraint firstItem="iLr-CV-6YF" firstAttribute="bottom" secondItem="UEV-2U-psd" secondAttribute="bottom" id="kbi-XK-Hob"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WFt-AB-g9e" secondAttribute="trailing" constant="88" id="np7-IS-SsZ"/>
+                            <constraint firstItem="iLr-CV-6YF" firstAttribute="top" secondItem="UEV-2U-psd" secondAttribute="top" id="nvO-bH-bv1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FG5-tS-2V7" secondAttribute="trailing" constant="20" id="uIC-x2-Zwo"/>
+                            <constraint firstItem="iLr-CV-6YF" firstAttribute="leading" secondItem="WFt-AB-g9e" secondAttribute="leading" id="uiV-A1-lN8"/>
                         </constraints>
                     </view>
                     <connections>
