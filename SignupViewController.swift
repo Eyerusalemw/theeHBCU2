@@ -20,8 +20,6 @@ class SignupViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     
-    @IBOutlet weak var schoolNameTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
     
     
@@ -42,11 +40,7 @@ class SignupViewController: UIViewController {
         guard let password = passwordTextField.text, !password.isEmpty else {
             return
         }
-        // If there is text in the schoolNameTextField if not, return the function 
-        
-        guard let school = schoolNameTextField.text, !school.isEmpty else {
-            return
-        }
+    
         
         // Create User
         UserService.createUser(fullName: fullName, email: email, password: password) {

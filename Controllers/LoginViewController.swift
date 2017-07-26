@@ -14,6 +14,10 @@ import FirebaseAuthUI
 import FirebaseDatabase
 
 
+
+
+
+
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailTextFieldButton: UITextField!
@@ -23,6 +27,19 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+//    func firebaseAuth(_ credential: AuthCredential) {
+//        Auth.auth().signIn(with: credential, completion: { (user, error) in
+//            if error != nil {
+//                print("unable to authenticate with Firebase - \(error)" )
+//            } else {
+//                print("successfully authenticated with Firebase")
+//            }
+//            })
+//    }
+//    
+    
+    
     
     @IBAction func loginButtonTapped(_ sender: Any) {
         // If there is text in the email textfield if not, return the function
