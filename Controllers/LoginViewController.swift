@@ -52,6 +52,7 @@ class LoginViewController: UIViewController {
         UserService.loginUser(email: email, password: password){
             // When all is done
             self.performSegue(withIdentifier: "logintomainview", sender: self)
+        
         }
         
 
@@ -63,6 +64,7 @@ class LoginViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
 
     }
+    
 }
 
 

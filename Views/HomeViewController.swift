@@ -17,17 +17,14 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UserService.posts(for: User.current) { (posts) in
-            self.posts = posts
-//          self.tableView.reloadData()
-        }
+        
     }
     
-     var posts = [Post]()
+
 }
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

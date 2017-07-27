@@ -35,8 +35,10 @@ class CreateUsernameViewController: UIViewController {
                 return
             }
             
+            
+            
             ref.observeSingleEvent(of: .value, with: { (snapshot) in
-                let user = User(snapshot: snapshot)
+     //           let user = User(snapshot: snapshot)
                 
                 // handle newly created user here
             })

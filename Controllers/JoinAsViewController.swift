@@ -70,4 +70,6 @@ class JoinAsViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     @IBAction func backButtonTapped(_ sender: Any) {
          self.dismiss(animated: true, completion: nil)
     }
+    
+
 }

@@ -32,16 +32,16 @@ struct PostService {
         //create a new post in a data base
         // create new post in database
         // 1
-        let currentUser = User.current
+ //       let currentUser = User.current
         // 2
         let post = Post(imageURL: urlString, imageHeight: aspectHeight)
         // 3
         let dict = post.dictValue
         
         // 4
-        let postRef = Database.database().reference().child("posts").child(currentUser.uid).childByAutoId()
+   //     let postRef = Database.database().reference().child("posts").child(currentUser.uid).childByAutoId()
         //5
-        postRef.updateChildValues(dict)
+   //     postRef.updateChildValues(dict)
     }
 
 }

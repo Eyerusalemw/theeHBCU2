@@ -96,7 +96,7 @@
         <!--Main Tab Bar Controller-->
         <scene sceneID="Z0w-9Q-bzd">
             <objects>
-                <tabBarController id="57Q-yC-jCu" customClass="MainTabBarController" customModule="theeHBCU" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainVC" id="57Q-yC-jCu" customClass="MainTabBarController" customModule="theeHBCU" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="GfO-fW-Lyb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -112,7 +112,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="baq-DD-eUI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-262" y="-315"/>
+            <point key="canvasLocation" x="-210" y="-702"/>
         </scene>
         <!--Home-->
         <scene sceneID="Mop-Eg-xiX">
