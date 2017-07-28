@@ -924,11 +924,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icons8-Menu Filled_100" width="100" height="100"/>
-        <image name="icons8-Notification_50" width="50" height="50"/>
-        <image name="logo-3" width="383" height="93"/>
-        <image name="logo-4" width="382" height="93"/>
-        <image name="pexels-photo-94356" width="556" height="636"/>
+        <image name="icons8-Menu Filled_100" width="50" height="50"/>
+        <image name="icons8-Notification_50" width="25" height="25"/>
+        <image name="logo-3" width="191" height="46"/>
+        <image name="logo-4" width="191" height="46"/>
+        <image name="pexels-photo-94356" width="278" height="318"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ItO-YL-UVx"/>

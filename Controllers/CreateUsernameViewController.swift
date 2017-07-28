@@ -35,17 +35,13 @@ class CreateUsernameViewController: UIViewController {
                 return
             }
             
-            
-            
-            ref.observeSingleEvent(of: .value, with: { (snapshot) in
-     //           let user = User(snapshot: snapshot)
-                
-                // handle newly created user here
-            })
-        }
-        self.performSegue(withIdentifier: "continuetojoinas", sender: self)
+            guard let username = self.usernameTextFieldButton.text, !username.isEmpty else{
+                return
+            }
+             self.performSegue(withIdentifier: "continuetojoinas", sender: self)
     }
     
+    }
     
     @IBAction func backButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -53,5 +49,6 @@ class CreateUsernameViewController: UIViewController {
     
     
 }
+
 
 

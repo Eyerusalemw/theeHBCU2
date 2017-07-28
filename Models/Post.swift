@@ -37,7 +37,9 @@ class Post {
             let imageURL = dict["image_url"] as? String,
             let imageHeight = dict["image_height"] as? CGFloat,
             let createdAgo = dict["created_at"] as? TimeInterval
-            else { return nil }
+            else {
+                return nil
+        }
         
         self.key = snapshot.key
         self.imageURL = imageURL

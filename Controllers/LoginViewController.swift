@@ -39,6 +39,42 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func loginButtonTapped(_ sender: Any) {
+        
+        
+        func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
+            if let error = error {
+                assertionFailure("Error signing in: \(error.localizedDescription)")
+                return
+            }
+            
+            guard let user = user else {return}
+            
+            let userRef = Database.database().reference().child("users").child(user.uid)
+            
+            
+            //when existing user comes redirect them to the main storyboard by setting the window's root view controller
+            userRef.observeSingleEvent(of: .value, with: { [unowned self] (snapshot) in
+                
+                UserService.show(forUID: user.uid) { (user) in
+                    
+                    if let user = user {
+                        // handle existing user
+                        User.setCurrent(user, writeToUserDefaults: true)
+                        
+                        let initialViewController = UIStoryboard.initialViewController(for: .main)
+                        self.view.window?.rootViewController = initialViewController
+                        self.view.window?.makeKeyAndVisible()
+                    }
+//                    else {
+//                        // handle new user
+//                        self.performSegue(withIdentifier: Constants.Segue.toCreateUsername, sender: self)
+//                    }
+                    
+                }
+                }
+            )
+        }
+
         // If there is text in the email textfield if not, return the function
         guard let email = emailTextFieldButton.text, !email.isEmpty else {
             return

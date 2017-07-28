@@ -85,8 +85,8 @@ struct UserService {
             completion(user)
         })
     }
-    static func posts(for user: User, completion: @escaping ([Post]) -> Void) {
-        let ref = Database.database().reference().child("posts").child(user.uid)
+    static func posts(completion: @escaping ([Post]) -> Void) {
+        let ref = Database.database().reference().child("posts").child(Auth.auth().currentUser!.uid)
         
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let snapshot = snapshot.children.allObjects as? [DataSnapshot] else {

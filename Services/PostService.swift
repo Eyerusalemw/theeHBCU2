@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import FirebaseStorage
 import FirebaseDatabase
+import FirebaseAuth
 
 
 
@@ -19,9 +20,12 @@ struct PostService {
         //  let imageRef = Storage.storage().reference().child("test_image.jpg")
         let imageRef = StorageReference.newPostImageReference()
         StorageService.uploadImage(image, at: imageRef) { (downloadURL) in
+            print("ERROR", downloadURL?.absoluteString)
+            
             guard let downloadURL = downloadURL else {
                 return
             }
+            
             let urlString = downloadURL.absoluteString
             let aspectHeight = image.aspectHeight
             create(forURLstring: urlString, aspectHeight: aspectHeight)
@@ -32,16 +36,16 @@ struct PostService {
         //create a new post in a data base
         // create new post in database
         // 1
- //       let currentUser = User.current
+//     let currentUser = User.current
         // 2
         let post = Post(imageURL: urlString, imageHeight: aspectHeight)
         // 3
         let dict = post.dictValue
         
         // 4
-   //     let postRef = Database.database().reference().child("posts").child(currentUser.uid).childByAutoId()
-        //5
-   //     postRef.updateChildValues(dict)
+        let postRef = Database.database().reference().child("posts").child(Auth.auth().currentUser!.uid).childByAutoId()
+        postRef.updateChildValues(dict)
+
     }
 
 }
