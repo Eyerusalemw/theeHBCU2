@@ -45,13 +45,14 @@ struct UserService {
     }
     
     
-    static func loginUser(email:String,password:String, completion: @escaping () -> ()){
+    static func loginUser(email:String,password:String, completion: @escaping (Error?) -> ()){
         
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             
             // If there is an error
             if error != nil{
                 print("ERROR LOGGING IN")
+                completion(error)
                 return
             }
             
@@ -59,7 +60,7 @@ struct UserService {
             
             
             User.setCurrent(tempUser, writeToUserDefaults: true)
-            completion()
+            completion(nil)
         }
     }
     

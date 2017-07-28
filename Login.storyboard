@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--LoginVC-->
+        <!--Home View Controller-->
         <scene sceneID="5tq-ay-fsA">
             <objects>
-                <viewController title="LoginVC" id="xuB-2k-9Df" customClass="HomeViewController" sceneMemberID="viewController">
+                <viewController id="xuB-2k-9Df" customClass="HomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LYF-zQ-Iee"/>
                         <viewControllerLayoutGuide type="bottom" id="SUg-qJ-3kj"/>
@@ -93,7 +93,7 @@
         <!--Login View Controller-->
         <scene sceneID="gbC-lI-4il">
             <objects>
-                <viewController id="BPx-n4-ynl" customClass="LoginViewController" customModule="theeHBCU" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BPx-n4-ynl" customClass="LoginViewController" customModule="theeHBCU" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aQW-px-IgX"/>
                         <viewControllerLayoutGuide type="bottom" id="OIK-gQ-e07"/>
@@ -931,6 +931,6 @@
         <image name="pexels-photo-94356" width="278" height="318"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ItO-YL-UVx"/>
+        <segue reference="V43-hY-66d"/>
     </inferredMetricsTieBreakers>
 </document>

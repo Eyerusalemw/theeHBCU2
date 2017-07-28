@@ -85,12 +85,15 @@ class LoginViewController: UIViewController {
             return
         }
         
-        UserService.loginUser(email: email, password: password){
-            // When all is done
+        UserService.loginUser(email: email, password: password) { (error) in
+            if error != nil {
+                print(error?.localizedDescription)
+                return
+            }
+            
             self.performSegue(withIdentifier: "logintomainview", sender: self)
-        
+
         }
-        
 
     
     }

@@ -20,6 +20,7 @@ class HomeViewController:UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
+    
         
         UserService.posts { (posts) in
             self.posts = posts
